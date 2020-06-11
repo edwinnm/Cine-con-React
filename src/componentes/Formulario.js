@@ -52,10 +52,10 @@ export default class Formulario extends React.Component {
 	}
 	handleSubmit(event) {
 		event.preventDefault();
-		this.state.fecha == "Escoja" ? this.state.errorFecha = true : this.state.errorFecha = false;
-		this.state.sala =="Escoja" ? this.state.errorSala = true : this.state.errorSala = false;
-		this.state.funcion =="Escoja"? this.state.errorFuncion = true : this.state.errorFuncion = false;
-		this.state.numeroAsientos == 0 ? this.state.errorNumeroAsientos = true : this.state.errorNumeroAsientos = false;
+		this.state.fecha == "Escoja" ? this.setState({errorFecha: true}) : this.setState({errorFecha: false});
+		this.state.sala =="Escoja" ? this.setState({errorSala: true}) : this.setState({errorSala: false});
+		this.state.funcion =="Escoja"? this.setState ({errorFuncion : true}) : this.setState ({errorFuncion : false});
+		this.state.numeroAsientos == 0 ? this.setState({errorNumeroAsientos : true}) : this.setState({errorNumeroAsientos : false});
 
 		if(!this.state.errorFecha && !this.state.errorSala && !this.state.errorFuncion && !this.state.errorNumeroAsientos){
 			this.handleShow()
