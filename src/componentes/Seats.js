@@ -41,11 +41,7 @@ export default class Seats extends React.Component {
     }
     
     onClickData(seat) {
-      //Mandar dats si y solo si los asietos entas seleccionados
-      if(this.state.disponibles == this.state.seatSeleccionado.length){
-        
-        this.props.callbackFromParent(this.state.seatSeleccionado);
-      }
+      
       //Compruebo si esta reservado
       if(this.state.seatReserved.indexOf(seat) > -1 ) {
         
@@ -63,8 +59,13 @@ export default class Seats extends React.Component {
             seatAvailable: this.state.seatAvailable.filter(res => res != seat),
             
           })
-
         }
+                  //Mandar dats si y solo si los asietos entas seleccionados
+      if(parseInt(this.state.disponibles,10) == this.state.seatSeleccionado.length){
+        console.log("mande data",parseInt(this.state.disponibles,10) )
+        this.props.callbackFromParent(this.state.seatSeleccionado);
+      }
+
 
 
       }
@@ -73,7 +74,7 @@ export default class Seats extends React.Component {
     render() {
       return (
         <div>
-          <h2 className="text-white">Escoja los asientos: </h2>
+          <h5 className="text-white">Escoja los asientos: </h5>
           <DrawGrid 
             seat = { this.state.seat }
             available = { this.state.seatAvailable }
@@ -125,7 +126,20 @@ export default class Seats extends React.Component {
       return (
           <div className="container">
             {this.dibujaGrilla(this.props, 12)}
-
+            <div className="row">
+              <h5>Información: </h5>
+            </div>
+            <div className="row">
+              <div className="text-white text-center bg-success col mr-5 border rounded">
+                Disponible
+              </div>
+              <div className="text-white text-center bg-danger col mr-5 border rounded">
+                Reservado
+              </div>
+              <div className="text-white text-center bg-primary col  border rounded">
+                Seleccionado
+              </div>
+            </div>
           </div>
       )
     }
@@ -136,32 +150,6 @@ export default class Seats extends React.Component {
     }
   }
   
-  class AvailableList extends React.Component {
-    render() {
-      const seatCount = this.props.available.length;
-      return(
-        <div className="left">
-          <h4>Available Seats: ({seatCount == 0? 'No seats available' : seatCount})</h4>
-          <ul>
-            {this.props.available.map( res => <li key={res} >{res}</li> )}
-          </ul>
-        </div>
-      )
-    }
-  }
-  
-  class ReservedList extends React.Component {
-    render() {
-      return(
-        <div className="right">
-          <h4>Reserved Seats: ({this.props.reserved.length})</h4>
-          <ul>
-            { this.props.reserved.map(res => <li key={res} >{res}</li>) }
-          </ul>
-        </div>
-      )
-    }
-  }
-  
+ 
   
  

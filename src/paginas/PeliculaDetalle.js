@@ -35,7 +35,7 @@ class PeliculaDetalle extends React.Component{
 				<Header fecha={this.props.test.fecha} />
 				<Destaque pelicula={this.props.pelicula_detalle.data}></Destaque>
 				<Cast cast={this.props.creditos.data}></Cast>
-				{ JSON.parse(localStorage.getItem('myState')) === "/" && <Formulario/>}
+				{ JSON.parse(localStorage.getItem('myState')) === "/" && <Formulario pelicula={this.props.pelicula_detalle.data.title}/>}
 
 				
 				

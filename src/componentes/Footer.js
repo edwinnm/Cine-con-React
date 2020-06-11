@@ -1,11 +1,10 @@
 
 import React from 'react'
-import Logo from '../img/logo.png'
-
-
-
 export default ()=>(
-	<div>
-		<img src={Logo} alt="logo moviedb" width="200" height="75"/>
+	<div className="row bg-dark mt-5">
+		<div className="col text-center my-auto">
+			<div className="text-white">Trabajo HCI Avanzado</div>
+			<div className="text-white">Edwin Narváez, Christian Moreira</div>
+		</div>
 	</div>
 	)

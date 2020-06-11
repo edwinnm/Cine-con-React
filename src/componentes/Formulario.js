@@ -80,7 +80,7 @@ export default class Formulario extends React.Component {
 						<option value='Escoja' seleted >Escoja</option>
 						{this.state.FECHAS.map(fecha => <option value={fecha}>{fecha}</option>)}
 						</Form.Control>
-						{this.state.errorFecha && <div className="border border-danger text-danger mt-2 text-center">Escoja una fecha</div>}
+						{this.state.errorFecha && <div className="border border-danger bg-danger text-white mt-2 text-center">Escoja una fecha</div>}
 					</Form.Group>
 		
 				<Form.Group as={Col} controlId="idsala">
@@ -91,7 +91,7 @@ export default class Formulario extends React.Component {
 					<option value ="2">2</option>
 					<option value ="3">3</option>
 					</Form.Control>
-					{this.state.errorSala && <div className="border border-danger text-danger mt-2 text-center">Escoja una sala</div>}
+					{this.state.errorSala && <div className="border border-danger bg-danger text-white mt-2 text-center">Escoja una sala</div>}
 				</Form.Group>
 				</Form.Row>
 			
@@ -103,7 +103,7 @@ export default class Formulario extends React.Component {
 					<option value='Escoja' seleted>Escoja</option>
 					{this.state.FUNCIONES.map(funcion => <option value={funcion}> {funcion}</option>)}
 					</Form.Control>
-					{this.state.errorFuncion && <div className="border border-danger text-danger mt-2 text-center">Escoja una funcion</div>}
+					{this.state.errorFuncion && <div className="border border-danger bg-danger text-white mt-2 text-center">Escoja una funcion</div>}
 				</Form.Group>
 			
 				<Form.Group as={Col} controlId="idasientos">
@@ -113,14 +113,14 @@ export default class Formulario extends React.Component {
 									value={this.state.numeroAsientos} onChange={this.handleChange}
 									/>
 					
-					{this.state.errorNumeroAsientos && <div className="border border-danger text-danger mt-2 text-center">Escoja los asientos</div>}
+					{this.state.errorNumeroAsientos && <div className="bborder border-danger bg-danger text-white mt-2 text-center">Escoja los asientos</div>}
 				</Form.Group>
 				</Form.Row>
 				
 				<Seats callbackFromParent={this.myCallback} nasientos={this.state.numeroAsientos}/>
 			    
 				<div class="col text-center mt-3">
-					<Button className ="center" variant="primary" type="submit">
+					<Button className ="center" variant="secondary" type="submit">
 					Comprar
 					</Button>
     			</div>
@@ -131,11 +131,12 @@ export default class Formulario extends React.Component {
         	  		<Modal.Title>Confirmar compra</Modal.Title>
 		        </Modal.Header>
         		<Modal.Body>
+					<p>Película: {this.props.pelicula}</p>
 					<p>Fecha: {this.state.fecha}</p>
 					<p>Función: {this.state.funcion}</p>
 					<p>Sala: {this.state.sala}</p>
 					<p>Número de asientos: {this.state.numeroAsientos}</p>
-					<p>Asientos: {this.state.asientos.join(", ")}</p>
+					<p>Asientos: {this.state.asientos.sort().join(", ")}</p>
 				</Modal.Body>
         		<Modal.Footer>
           			<Button variant="secondary" onClick={this.handleClose}>

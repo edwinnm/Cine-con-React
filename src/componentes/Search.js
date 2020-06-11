@@ -11,8 +11,6 @@ const InputSearch = styled.input`
 	border:none;
 	height:22px;
 	color:yellow;
-	width:220px;
-	margin-left:8px;
 	&:focus{
 		outline:none;
 	}
@@ -25,9 +23,10 @@ const BotonClear = styled.a`
 `
 
 export default ({onChangeSearch,clear,search_text})=>(
-	<ContenedorSearch>
-		<i className="fa fa-search fa-lg" aria-hidden="true"></i>
-			<InputSearch placeholder="Buscar" onChange={onChangeSearch} value={search_text}/>
-		<BotonClear href="#" onClick={clear}><i className="fa fa-close fa-lg" aria-hidden="true"></i></BotonClear>
-	</ContenedorSearch>
+	<div className="my-auto form-inline my-2 my-lg-0 text-white">
+		<i className="fa fa-search fa-lg mr-2" aria-hidden="true"></i>
+			<input className="form-control mr-2" type="search" placeholder="Buscar" onChange={onChangeSearch} value={search_text}/>
+		<button href="#" className="btn text-white"onClick={clear}><i className="fa fa-close fa-lg" aria-hidden="true"></i></button>
+	</div>
+
 	)

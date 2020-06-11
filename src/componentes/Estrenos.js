@@ -5,11 +5,14 @@ const urlbaseImage = 'https://image.tmdb.org/t/p/w154'
 
 export default ({peliculas, path})=>{
 	var mensaje = "";
+	var icon  = "";
 	console.log(path)
 	if (path === "/"){
 		mensaje = "Comprar"
+		icon = "fa fa-shopping-cart"
 	}else{
 		mensaje="Ir a la película"
+		icon = "fa fa-arrow-right"
 	}
 	return(
 	<div className="row row-cols-1 row-cols-md-6">
@@ -31,7 +34,7 @@ export default ({peliculas, path})=>{
 										}
 
 									}}
-									>{mensaje}</Link>
+									>{mensaje} <i class={icon} aria-hidden="true"></i></Link>
 					</div>
 				</div>
 			</div>

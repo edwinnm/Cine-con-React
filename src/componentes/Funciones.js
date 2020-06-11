@@ -61,8 +61,8 @@ const PELICULAS = Object.entries(FUNCIONES)
 
 function _renderListGroup (sala){
   return (
-    <ListGroup.Item action href={ "#"+sala}>
-      {sala.charAt(0).toUpperCase() + sala.substr(1,sala.length-2)+ " "+sala.substr(-1)}
+    <ListGroup.Item className="bg-dark border text-white text-center" action href={ "#"+sala}>
+      {sala.charAt(0).toUpperCase() + sala.substr(1,sala.length-2)+ " "+sala.substr(-1)} <i class="fa fa-television" aria-hidden="true"></i>
     </ListGroup.Item>
 
   )
@@ -99,12 +99,12 @@ function _renderTab (sala){
 export default ()=>(
 <Tab.Container id="list-group-tabs-example" defaultActiveKey="#sala1">
   <Row>
-    <Col sm={4}>
+    <Col sm={3} className="my-auto">
     <ListGroup>
     {SALAS.map (sala => _renderListGroup(sala))}
     </ListGroup>
     </Col>
-    <Col sm={8}>
+    <Col sm={9}>
       <Tab.Content>
         {PELICULAS.map (sala => _renderTab(sala))}
       </Tab.Content>

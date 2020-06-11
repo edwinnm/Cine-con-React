@@ -37,21 +37,23 @@ class Header extends React.Component{
 		var inactiva = "nav-item nav-link"
 		return(
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-				<img src={Logo} alt="logo app" width="100" height="75"/>
 				
-				<div className="navbar-nav">
-					<Link className={this.props.path === "/" ? activa : inactiva} to={"/"}>Inicio</Link>
+				<img className="navbar-brand" src={Logo} alt="logo app" width="100" height="75"/>
+				
+				<div className=" navbar-collapse">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item"><Link className={this.props.path === "/" ? activa : inactiva} to={"/"}>Inicio</Link></li>
 					<Link className={this.props.path === "/estrenos" ? activa : inactiva} to={"/estrenos"}>Estrenos</Link>
 					<Link className={this.props.path === "/promociones" ? activa : inactiva} to={"/promociones"}>Promociones</Link>
-
+					</ul>
+					{ this.props.path === "/" && 
+						<Search onChangeSearch = {this.onChangeSearch}
+						clear={this.onClearTextSearch }
+						search_text={this.state.search_text}
+					/>}				
 				</div>
-				
-				{ this.props.path === "/" && 
-				<Search onChangeSearch = {this.onChangeSearch}
-				clear={this.onClearTextSearch }
-				search_text={this.state.search_text}
-				/>}
-			
+	
+
 				
 			</nav>
 		)
