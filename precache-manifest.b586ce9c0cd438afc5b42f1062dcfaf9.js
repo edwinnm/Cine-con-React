@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afc7818e27904e2045cbb90fda73ec1e",
+    "revision": "5c514157f2b628459f7804a147c4620a",
     "url": "/Cine-con-React/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cine-con-React/static/css/2.768c92ad.chunk.css"
   },
   {
-    "revision": "0983d5ce095721447d94",
+    "revision": "46b47ae961e5657d1db6",
     "url": "/Cine-con-React/static/css/main.75983624.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cine-con-React/static/js/2.603b1224.chunk.js"
   },
   {
-    "revision": "0983d5ce095721447d94",
-    "url": "/Cine-con-React/static/js/main.ec81399a.chunk.js"
+    "revision": "46b47ae961e5657d1db6",
+    "url": "/Cine-con-React/static/js/main.342816a8.chunk.js"
   },
   {
     "revision": "0976d8a9499d3a654b41",
