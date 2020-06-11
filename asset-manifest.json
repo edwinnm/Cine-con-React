@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Cine-con-React/static/css/main.75983624.chunk.css",
+    "main.js": "/Cine-con-React/static/js/main.ec81399a.chunk.js",
+    "main.js.map": "/Cine-con-React/static/js/main.ec81399a.chunk.js.map",
+    "runtime-main.js": "/Cine-con-React/static/js/runtime-main.2970b9c6.js",
+    "runtime-main.js.map": "/Cine-con-React/static/js/runtime-main.2970b9c6.js.map",
+    "static/css/2.768c92ad.chunk.css": "/Cine-con-React/static/css/2.768c92ad.chunk.css",
+    "static/js/2.603b1224.chunk.js": "/Cine-con-React/static/js/2.603b1224.chunk.js",
+    "static/js/2.603b1224.chunk.js.map": "/Cine-con-React/static/js/2.603b1224.chunk.js.map",
+    "index.html": "/Cine-con-React/index.html",
+    "precache-manifest.d3350f5c019f81e03df1fb876a4ba67b.js": "/Cine-con-React/precache-manifest.d3350f5c019f81e03df1fb876a4ba67b.js",
+    "service-worker.js": "/Cine-con-React/service-worker.js",
+    "static/css/2.768c92ad.chunk.css.map": "/Cine-con-React/static/css/2.768c92ad.chunk.css.map",
+    "static/css/main.75983624.chunk.css.map": "/Cine-con-React/static/css/main.75983624.chunk.css.map",
+    "static/media/Captura.JPG": "/Cine-con-React/static/media/Captura.2a859fc2.JPG",
+    "static/media/Captura2.JPG": "/Cine-con-React/static/media/Captura2.c3106221.JPG",
+    "static/media/Captura3.JPG": "/Cine-con-React/static/media/Captura3.3caedd8e.JPG",
+    "static/media/cine.jpg": "/Cine-con-React/static/media/cine.3a62c7ae.jpg",
+    "static/media/cine.png": "/Cine-con-React/static/media/cine.88cf9b6d.png",
+    "static/media/font-awesome.min.css": "/Cine-con-React/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2970b9c6.js",
+    "static/css/2.768c92ad.chunk.css",
+    "static/js/2.603b1224.chunk.js",
+    "static/css/main.75983624.chunk.css",
+    "static/js/main.ec81399a.chunk.js"
+  ]
+}
